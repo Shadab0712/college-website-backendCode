@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: college-website-project
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/al_ibrahim_database
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: abc1234
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+mail:
+  host: smtp.gmail.com
+  port: 587
+  username: alibrahimmahavidhyalaya@gmail.com
+  password: czye fkvq dpka mllj
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
